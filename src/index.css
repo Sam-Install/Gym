@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+
+/* src/index.css */
+
+/* 1. Import Tailwind base, components, utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Add custom global styles (base layer) */
+@layer base {
+  body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  /* Example for <ul> and <li> — restore default list styling */
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 0;
+    padding-left: 1.25rem; /* adjust indent */
+  }
+  li {
+    margin-top: 0.25rem; /* small spacing between list items */
+  }
+}
