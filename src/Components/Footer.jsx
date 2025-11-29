@@ -19,11 +19,11 @@ const Footer = () => {
                     <div>
                         <h2 className="font-semibold mb-5 text-gray-800">Company</h2>
 
-                        <ul className="text-sm space-y-2">
+                        <ul className="text-sm text-center">
   <li><a href="/">Home</a></li>
   <li><a href="/about">About us</a></li>
   <li className="relative">
-    <span className="cursor-pointer">Services</span>  {/* Use a span or button if you don’t want auto navigation */}
+    <span className="cursor-pointer">Services</span>  
     <ul className="ml-4 mt-1 space-y-1">
       <li><a href="/services/nutrition">Nutrition</a></li>
       <li><a href="/services/orthopedic">Orthopedic</a></li>
