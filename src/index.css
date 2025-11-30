@@ -28,4 +28,10 @@
   li {
     margin-top: 0.25rem; /* small spacing between list items */
   }
+
+
+  html, body {
+  overflow-x: hidden;
+}
+
 }

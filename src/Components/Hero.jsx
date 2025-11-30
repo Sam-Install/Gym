@@ -4,28 +4,26 @@ import two from '../assets/2.jpeg'
 import three from '../assets/3.jpeg'
 import { Link } from 'react-router-dom'
 
+
 const Hero = () => {
   const images = [one, two, three]
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1))
+    setCurrentIndex(prev => (prev === images.length - 1 ? 0 : prev + 1))
   }
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1))
+    setCurrentIndex(prev => (prev === 0 ? images.length - 1 : prev - 1))
   }
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 3000)
+    const interval = setInterval(() => nextSlide(), 3000)
     return () => clearInterval(interval)
   }, [])
 
   return (
     <div className="relative w-full overflow-hidden h-[500px]">
-  
       <div
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -54,14 +52,24 @@ const Hero = () => {
         </p>
 
         <div className='flex flex-col sm:flex-row gap-2 sm:gap-4 mt-2'>
+          <Link to='about'>
+            <button className='bg-red-500 text-sm text-white px-6 py-2 rounded'>
+              Learn More
+            </button>
+          </Link>
 
-           <Link to='about'><button className='bg-red-500 text-sm text-white px-6 py-2 rounded'>Learn More</button></Link> 
-           <Link><button className='bg-green-500 text-sm text-white px-6 py-2 rounded'>Text Us</button> </Link> 
-
+          <a
+            href="https://wa.me/254753879163"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className='bg-green-500 text-sm text-white px-6 py-2 rounded'>
+              Text Us
+            </button>
+          </a>
         </div>
       </div>
 
-   
       <button
         onClick={prevSlide}
         className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 rounded-full z-20"
