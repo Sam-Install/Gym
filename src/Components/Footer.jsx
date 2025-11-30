@@ -31,6 +31,7 @@ const Footer = () => {
                 <li><a href="/member">Membership</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/store">Store</a></li>
+                <li><a href="/cart">Cart</a></li>
               </ul>
             </div>
 
