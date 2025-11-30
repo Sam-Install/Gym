@@ -10,7 +10,7 @@ import { ElfsightWidget } from 'react-elfsight-widget'
 
 const Home = () => {
   return (
-    <div>
+    <div className='mt-8 md:mt-16 lg:mt-24'>
       <Hero/>
       <Abouts/>
       <Dedicated/>
